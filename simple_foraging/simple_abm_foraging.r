@@ -110,7 +110,7 @@ look.for.resources.clever <- function(agents, resources){
 
 
 
-# Pop<-create.agents(10, environment.size)
+# Pop<-create.agents(10)
 # plot(Pop$x, Pop$y, xlim=c(0, environment.size), ylim=c(0, environment.size))
 # 
 # library(tidyverse)
