@@ -13,7 +13,7 @@ steps <- 50
 strategy <- 1
 runs <- 10
 
-create.agents <- function(x, env.size){
+create.agents <- function(x){
   pop <- data.frame(id = 1:x, energy = 0, x = 0, y = 0)
   for(i in 1:x){
     pop[i,]$x <- sample(seq(1,environment.size))[1]
@@ -116,7 +116,7 @@ look.for.resources.clever <- function(agents, resources){
 
 
 
-# Pop<-create.agents(10, environment.size)
+# Pop<-create.agents(10)
 # plot(Pop$x, Pop$y, xlim=c(0, environment.size), ylim=c(0, environment.size))
 #
 # library(tidyverse)
@@ -158,7 +158,7 @@ consumed.resources <- array(0,c(runs,steps))
 
 for(r in 1:runs){
   countr <- 0
-  Pop<-create.agents(10, environment.size)
+  Pop<-create.agents(10)
   Resources <- create.resources(resources)
   for(t in 1:steps){
     print(paste(r,t,sep=" : "))
