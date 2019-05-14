@@ -9,7 +9,7 @@ environment.size <- 200
 max.amount <- 3
 steps <- 200
 
-create.agents <- function(x, env.size){
+create.agents <- function(x){
   pop <- data.frame(id = rep("a", x), energy = 0, x = 0, y = 0, t = 0)
   for(i in 1:x){
     pop[i,]$x <- sample(seq(1,environment.size))[1]
@@ -111,7 +111,7 @@ look.for.resources.clever <- function(agents, resources){
 
 
 
-# Pop<-create.agents(10, environment.size)
+# Pop<-create.agents(10)
 # plot(Pop$x, Pop$y, xlim=c(0, environment.size), ylim=c(0, environment.size))
 # 
 # library(tidyverse)
@@ -132,7 +132,7 @@ look.for.resources.clever <- function(agents, resources){
 
 
 
-Pop<-create.agents(N, environment.size)
+Pop<-create.agents(N)
 Resources <- create.resources(resources)
 
 results <- rbind(Pop, Resources)
