@@ -8,7 +8,7 @@ environment.size <- 20
 max.amount <- 3
 steps <- 20
 
-create.agents <- function(x, env.size){
+create.agents <- function(x){
   pop <- data.frame(id = 1:x, energy = 0, x = 0, y = 0)
   for(i in 1:x){
     pop[i,]$x <- sample(seq(1,environment.size))[1]
@@ -131,7 +131,7 @@ look.for.resources.clever <- function(agents, resources){
 
 
 results <- NULL
-Pop<-create.agents(10, environment.size)
+Pop<-create.agents(10)
 Resources <- create.resources(resources)
 
 # PLOT INITIAL POSITIONS OF AGENTS
